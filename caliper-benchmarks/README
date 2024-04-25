@@ -1,0 +1,3 @@
+```
+npx caliper launch manager --caliper-workspace ./ --caliper-networkconfig networks/fabric/test-network.yaml --caliper-benchconfig benchmarks/crowd/config.yaml --caliper-flow-only-test --caliper-fabric-gateway-enabled
+```

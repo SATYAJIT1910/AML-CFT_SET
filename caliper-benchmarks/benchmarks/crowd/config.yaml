@@ -1,0 +1,20 @@
+test:
+  workers:
+    number: 5
+  rounds:
+    - label: Read | getProject
+      txNumber: 1000
+      rateControl:
+          type: fixed-load
+          opts:
+            transactionLoad: 100
+      workload:
+        module: benchmarks/crowd/crowdsourcingRead.js
+    - label: Write | createProject
+      txNumber: 1000
+      rateControl:
+          type: fixed-load
+          opts:
+            transactionLoad: 100
+      workload:
+        module: benchmarks/crowd/crowdsourcing.js
